@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HelpBoss</string>
+    <string name="titleAuth">Авторизация</string>
+    <string name="hintLogin">логин</string>
+    <string name="hintPassword">пароль</string>
+    <string name="whatThePass">Забыли пароль?</string>
+    <string name="btnMainAuth">Войти</string>
+    <string name="btnRegistry"><u>Регистрация</u></string>
+    <string name="hintEditMsgChat">Сообщение</string>
+    <string name="hintCreateLogin">Придумайте логин</string>
+    <string name="hintCreatePassword">Придумайте пароль</string>
+    <string name="hintRepeatPassword">Повторите пароль</string>
+    <string name="hintEditEmail">Введите Ваш e-mail</string>
+    <string name="registration">Регистрация</string>
+</resources>

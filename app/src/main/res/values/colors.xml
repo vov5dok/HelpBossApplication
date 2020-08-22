@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="grayBtn">#E5E5E5</color>
+    <color name="green">#2EFF00</color>
+    <color name="grayBtnPress">#D1D7E1FF</color>
+    <color name="bgcFormEditMsg">#A4D5F3</color>
+    <color name="bgcMessagesChat">#BFFDFCFC</color>
+    <color name="bgcMessagesChatTest">#BFD5D5D5</color>
+    <color name="errorWindowAuth">#FD0000</color>
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_fon" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/logo_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/main_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleAuth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titleAuth"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/errorAuth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/errorWindowAuth"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/containerLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <EditText
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/hintLogin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="@string/hintPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/whatPassLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/whatPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/whatThePass"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="end"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerButtonAuth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonAuth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_auth_main"
+                android:text="@string/btnMainAuth"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:onClick="loginIn"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnRegistryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/btnRegistry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnRegistry"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:onClick="registration"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_backgroundReg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_fon" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/main_containerReg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/titleAuthReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registration"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/errorRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/errorWindowAuth"
+            android:textSize="18sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
+
+        <LinearLayout
+            android:id="@+id/containerLoginReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <EditText
+                android:id="@+id/loginReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/hintCreateLogin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/black_border_bottom"/>
+
+            <TextView
+                android:id="@+id/hintLoginReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="латинские буквы и цифры"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:layout_marginLeft="20dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerPasswordReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/passwordReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="@string/hintCreatePassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/black_border_bottom"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerPasswordRepeatReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/passwordRepeatReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="@string/hintRepeatPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/black_border_bottom"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerEmailReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/emailReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:hint="@string/hintEditEmail"
+                android:inputType="textEmailSubject"
+                android:background="@drawable/black_border_bottom"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerButtonReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_auth_main"
+                android:text="@string/registration"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:onClick="buttonRegistration" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
