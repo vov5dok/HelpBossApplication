@@ -3,12 +3,18 @@ package vl.ivanov.helpbossapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.text.Editable;
 import android.util.JsonReader;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -20,6 +26,8 @@ import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
 public class activity_registration extends AppCompatActivity {
+
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,9 +85,29 @@ public class activity_registration extends AppCompatActivity {
             int request = registrationOnServer(loginObj.getText(), passwordObj1.getText(), emailObj.getText());
 
             if (request == 0) { // если код ответа = 0, то регистрация успешная
-                MainActivity.err.setText("Вы успешно зарегестрировались!");
-                MainActivity.err.setTextColor(R.color.green);
-                this.finish();
+                // вызов диалогового окна - начало
+                dialog = new Dialog(this); // создаем новое диалоговое окно
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // скрываем заголовок
+                dialog.setContentView(R.layout.dialog_registration); // путь к макету диалогового окна
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // прозрачный фон диалогового окна
+                dialog.setCancelable(false); // окно нельзя закрыть кнопкой "Назад"
+
+                // кнопка "Авторизация" - начало
+                Button btncontinue = (Button) dialog.findViewById(R.id.dialog_btn_continue);
+                btncontinue.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // обрабатываем нажатие кнопки - начало
+                        finish(); // закрыть этот класс
+                        // обрабатываем нажатие кнопки - конец
+
+                        dialog.dismiss(); // закрываем диалоговое окно
+                    }
+                });
+                // кнопка "Авторизация" - конец
+
+                dialog.show(); // показать даилоговое окно
+                // вызов диалогового окна - конец
             } else if (request == 1) {
                 errorObj.setText("Сервер временно недоступен. Попробуйте позднее =(");
             } else if (request == 2) {

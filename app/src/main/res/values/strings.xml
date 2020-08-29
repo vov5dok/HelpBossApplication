@@ -12,4 +12,5 @@
     <string name="hintRepeatPassword">Повторите пароль</string>
     <string name="hintEditEmail">Введите Ваш e-mail</string>
     <string name="registration">Регистрация</string>
+    <string name="title_dialog_reg">Вы успешно зарегестрировались!\nАвторизуйтесь</string>
 </resources>
