@@ -8,8 +8,8 @@ android {
         applicationId "vl.ivanov.helpbossapplication"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 4
-        versionName "2.2"
+        versionCode 6
+        versionName "2.2.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
