@@ -148,8 +148,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Запуск окна для регистрации аккаунта
+     * @param v
+     */
     public void registration(View v) {
         Intent intent = new Intent("vl.ivanov.helpbossapplication.activity_registration");
+        startActivity(intent);
+    }
+
+    /**
+     * Запуск окна для восстановления пароля
+     * @param v
+     */
+    public void passwordRecovery(View v) {
+        Intent intent = new Intent("vl.ivanov.helpbossapplication.password_recovery");
         startActivity(intent);
     }
 

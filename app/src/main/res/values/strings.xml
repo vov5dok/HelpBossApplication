@@ -13,4 +13,8 @@
     <string name="hintEditEmail">Введите Ваш e-mail</string>
     <string name="registration">Регистрация</string>
     <string name="title_dialog_reg">Вы успешно зарегестрировались!\nАвторизуйтесь</string>
+    <string name="passwordRecovery">Восстановление пароля</string>
+    <string name="next">Далее</string>
+    <string name="descPassRec">Введите код, отправленный на Ваш e-mail</string>
+    <string name="save">Сохранить</string>
 </resources>
