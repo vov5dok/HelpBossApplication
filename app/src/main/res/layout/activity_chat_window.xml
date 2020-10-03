@@ -33,46 +33,197 @@
         android:layout_marginBottom="10dp" />
 
 
-
-
     <LinearLayout
         android:id="@+id/containerEditMsgChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:background="@drawable/bg_edit_message_chat"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:paddingLeft="20dp"
-        android:paddingBottom="7dp"
-        android:gravity="center">
+        android:paddingBottom="7dp">
 
 
         <EditText
-            android:id="@+id/messageChat"
+            android:id="@+id/textMessageChat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:hint="@string/hintEditMsgChat"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
-            android:backgroundTint="@android:color/transparent"/>
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/hintEditMsgChat"
+            android:inputType="textMultiLine"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:longClickable="true" />
 
         <Button
             android:id="@+id/sendMessageChat"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:background="@drawable/ic_send_black_24dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
+            android:background="@drawable/ic_send_black_24dp"
             android:gravity="center_vertical"
-            android:onClick="sendMessage"/>
+            android:onClick="sendMessage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fon_wnd_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#59000000"
+        android:orientation="vertical"
+        android:layout_below="@+id/ico_settings"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:visibility="visible">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/block_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ico_settings"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="100dp"
+        android:background="@color/bgcFormEditMsg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/btn_exit_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.05"
+            android:background="@drawable/button_on_setting"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:longClickable="true">
+
+            <TextView
+                android:id="@+id/btn_stn_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/exit"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.05"
+            android:background="@drawable/button_on_setting"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@+id/btn_stn_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/profile"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.05"
+            android:background="@drawable/button_on_setting"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@+id/btn_stn_ask_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/ask_question"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.05"
+            android:background="@drawable/button_on_setting"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@+id/btn_stn_become_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/becone_author"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@+id/stub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 

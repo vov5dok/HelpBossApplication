@@ -17,4 +17,8 @@
     <string name="next">Далее</string>
     <string name="descPassRec">Введите код, отправленный на Ваш e-mail</string>
     <string name="save">Сохранить</string>
+    <string name="exit">Выйти</string>
+    <string name="profile">Профиль</string>
+    <string name="ask_question">Задать вопрос</string>
+    <string name="becone_author">Стать автором</string>
 </resources>

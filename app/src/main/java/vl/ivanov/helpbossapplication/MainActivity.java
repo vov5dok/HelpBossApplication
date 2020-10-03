@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Метод для установки логина и пароля из файла настроек
+     * Метод для чтения логина и пароля из файла настроек
      */
     private void readProperties() {
         loginInSet = settings.getString("login", "0");

@@ -10,7 +10,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,7 +28,7 @@ import java.util.ArrayList;
 import javax.net.ssl.HttpsURLConnection;
 
 
-public class chatWindow extends AppCompatActivity {
+public class chatWindow extends AppCompatActivity implements View.OnClickListener {
 
     private ArrayList<Messages> messages = new ArrayList<Messages>();
     private ArrayList<Messages> messagesNew = new ArrayList<Messages>();
@@ -35,7 +41,13 @@ public class chatWindow extends AppCompatActivity {
         setContentView(R.layout.activity_chat_window);
         getSupportActionBar().hide(); // скрываем ActionBar
 
-        msgObj = (EditText) findViewById(R.id.messageChat);
+        msgObj = (EditText) findViewById(R.id.textMessageChat);
+
+        ImageView btnOpenSettings = (ImageView) findViewById(R.id.ico_settings);
+        LinearLayout btnExitSetting = (LinearLayout) findViewById(R.id.btn_exit_setting);
+
+        btnOpenSettings.setOnClickListener(this);
+        btnExitSetting.setOnClickListener(this);
 
     }
 
@@ -202,5 +214,48 @@ public class chatWindow extends AppCompatActivity {
         settings = getSharedPreferences(fileProperties, MODE_PRIVATE);
 
         return settings.getString("login", "0");
+    }
+
+
+    // Отслеживаем нажатия кнопок на активити
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.ico_settings: // кнопка открытия настроек
+
+                // блокируем поле ввода сообщения
+                EditText blockEditMsg = (EditText) findViewById(R.id.textMessageChat);
+                blockEditMsg.setClickable(false);
+                blockEditMsg.setFocusable(false);
+                blockEditMsg.setLongClickable(false);
+
+                // блокируем кнопку отправки сообщения
+                Button btnSendMsg = (Button) findViewById(R.id.sendMessageChat);
+                btnSendMsg.setClickable(false);
+
+                // показываем темный фон под окном с выводом настроек
+                LinearLayout blockFonSettings = (LinearLayout) findViewById(R.id.fon_wnd_settings);
+                blockFonSettings.setVisibility(View.VISIBLE);
+
+                // показываем блок с настройками
+                LinearLayout blockSettings = (LinearLayout) findViewById(R.id.block_settings);
+                blockSettings.setVisibility(View.VISIBLE);
+                break;
+
+            case R.id.btn_exit_setting: // кнопка "Выход"
+
+                // очищаем логин и пароль из файла настроек - начало
+                SharedPreferences settings;
+                settings = getSharedPreferences("saveSettings", MODE_PRIVATE);
+                SharedPreferences.Editor prefEditor = settings.edit();
+                prefEditor.putString("login", "");
+                prefEditor.putString("password", "");
+                prefEditor.apply();
+                // очищаем логин и пароль из файла настроек - конец
+
+                finish(); // закрыть этот класс
+
+                break;
+        }
     }
 }
